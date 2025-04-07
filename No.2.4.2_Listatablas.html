@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linkin Park - Band Members</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rock Salt', cursive;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .accordion-item {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .accordion-header {
+      background-color: #f7f7f7;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 15px;
+      border-top: 1px solid #ccc;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .no-image {
+      width: 150px;
+      height: 150px;
+      border: 1px dashed #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Unidad 21 Actividad 04-2:: Tema (Tipografía)</h1>
+  <h2>Linkin Park ~ Band Members</h2>
+
+  <div class="accordion">
+
+    <!-- Chester Bennington -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">Chester Bennington</div>
+      <div class="accordion-content">
+        <p><span class="label">Name:</span> Chester Charles Bennington</p>
+        <p><span class="label">Born:</span> March 20, 1976 – Phoenix, Arizona, U.S.</p>
+        <p><span class="label">Died:</span> July 20, 2017 – Palos Verdes Estates, California, U.S.</p>
+        <p><span class="label">Genres:</span> Alternative metal, nu metal, hard rock, alternative rock, electronic rock, pop rock</p>
+        <p><span class="label">Occupation:</span> Singer, songwriter, actor</p>
+        <p><span class="label">Instruments:</span> Vocals</p>
+        <p><span class="label">Years active:</span> 1992 – 2017</p>
+        <div class="no-image">No image available</div>
+      </div>
+    </div>
+
+    <!-- Rob Bourdon -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">Rob Bourdon</div>
+      <div class="accordion-content">
+        <p><span class="label">Occupation:</span> Drummer</p>
+        <p><span class="label">Years active:</span> 1996 – present</p>
+        <div class="no-image">No image available</div>
+      </div>
+    </div>
+
+    <!-- Mike Shinoda -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">Mike Shinoda</div>
+      <div class="accordion-content">
+        <p><span class="label">Occupation:</span> Rapper, singer, songwriter, producer</p>
+        <p><span class="label">Instruments:</span> Vocals, keyboard, guitar</p>
+        <p><span class="label">Years active:</span> 1996 – present</p>
+        <div class="no-image">No image available</div>
+      </div>
+    </div>
+
+    <!-- Brad Delson -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">Brad Delson</div>
+      <div class="accordion-content">
+        <p><span class="label">Occupation:</span> Guitarist</p>
+        <p><span class="label">Years active:</span> 1996 – present</p>
+        <div class="no-image">No image available</div>
+      </div>
+    </div>
+
+    <!-- Joe Hahn -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">Joe Hahn</div>
+      <div class="accordion-content">
+        <p><span class="label">Occupation:</span> DJ, sampler, director</p>
+        <p><span class="label">Years active:</span> 1996 – present</p>
+        <div class="no-image">No image available</div>
+      </div>
+    </div>
+
+    <!-- Dave Farrell -->
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">Dave Farrell</div>
+      <div class="accordion-content">
+        <p><span class="label">Occupation:</span> Bassist</p>
+        <p><span class="label">Years active:</span> 1996 – present</p>
+        <div class="no-image">No image available</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleAccordion(header) {
+      const content = header.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
