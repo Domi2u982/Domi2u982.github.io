@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>UNIDAD 2 | Actividad 02.1</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta charset="UTF-8"> 
+<meta name="Autor" content="Rivera Avila Dominic Alberto">
+<meta name="Fecha" content="28 de febrero de 2025">
+<meta name="Descripción" content="TABLAS act 2.1">
+<style>
+ 
+.tabla-colores-1 {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ 
+.tabla-colores-1 td {
+    border: 1px solid transparent;
+    padding: 2px 12px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+ 
+.c1 {
+    background-color: #ffb37d;
+}
+ 
+.c2 {
+    background-color: #b7fff9;
+}
+ 
+.c3 {
+    background-color: #e0e3ff;
+}
+ 
+.c4 {
+    background-color: #cdffcd;
+}
+ 
+.c5 {
+    background-color: #ffa5a3;
+}
+ 
+.c6 {
+    background-color: #b9ecf0;
+}
+ 
+.c7 {
+    background-color: #72c6c9;
+}
+ 
+.c8 {
+    background-color: #bb9975;
+}
+ 
+.tabla-colores-2 {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ 
+.tabla-colores-2 td,
+.tabla-colores-2 th {
+    border: 1px solid black;
+    padding: 3px 16px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+ 
+.c9 {
+    background-color: #ffe3b3;
+}
+ 
+.c10 {
+    background-color: #a9e4e8;
+}
+ 
+.c11 {
+    background-color: #dde0ff;
+}
+ 
+.c12 {
+    background-color: #cdffcd;
+}
+ 
+.c13 {
+    background-color: #adf5a0;
+}
+ 
+.c14 {
+    background-color: #ffa5a3;
+}
+ 
+.c15 {
+    background-color: #8fddfd;
+}
+ 
+.c16 {
+    background-color: #6dc4c7;
+}
+ 
+.c17 {
+    background-color: #a1a558;
+}
+ 
+/* Tabla Estructura */
+.tabla-estructura {
+    border-collapse: collapse;
+}
+ 
+.tabla-estructura td,
+.tabla-estructura th {
+    border: 1px solid black;
+    padding: 3px 14px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+ 
+  <h1>TABLAS</h1>
+ 
+  <h2 align="justify">Tabla</h2>
+<table border="5">
+<tbody>
+<tr>
+<td rowspan="2">A</td><td>B</td><td rowspan="3">D</td><td colspan="2">E</td><td>F</td>
+</tr>
+<tr>
+<td>C</td><td rowspan="2">G</td><td rowspan="2">H</td><td rowspan="2">I</td>
+</tr>
+<tr>
+<td colspan="2">J</td>
+</tr>
+<tr>
+<td colspan="3">K</td><td>L</td><td colspan="2">M</td>
+</tr>
+</tbody>
+</table>
+ 
+  <br>
+ 
+  <h2 align="justify">Tabla </h2>
+<table border="5">
+<tr align="center">
+<td><b>A</b></td><td><b>B</b></td><td><b>C</b></td>
+<td><b>D</b></td><td><b>E</b></td><td><b>F</b></td><td><b>G</b></td>
+</tr>
+<tr align="center">
+<td colspan="3">1</td><td rowspan="3">2</td>
+<td colspan="2">3</td><td rowspan="2">4</td>
+</tr>
+<tr align="center">
+<td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+</tr>
+<tr align="center">
+<td colspan="3">10</td><td colspan="2">11</td><td>12</td>
+</tr>
+<tr align="center">
+<td colspan="7">13</td>
+</tr>
+<tr align="center">
+<td>14</td><td>15</td><td>16</td>
+<td>17</td><td>18</td><td>19</td><td>20</td>
+</tr>
+</table>
+ 
+  <br>
+ 
+  <h2 align="justify">Tabla </h2>
+<table class="tabla-colores-1">
+<tbody>
+<tr>
+<td class="c1">1</td><td class="c1">2</td><td class="c1">2</td><td class="c1">3</td><td class="c1">3</td>
+</tr>
+<tr>
+<td class="c2">4</td><td class="c2">4</td><td class="c2">5</td><td class="c2">5</td><td class="c2">5</td>
+</tr>
+<tr>
+<td class="c2">4</td><td class="c2">4</td><td class="c3">6</td><td class="c3">6</td><td class="c3">7</td>
+</tr>
+<tr>
+<td class="c4">8</td><td class="c4">9</td><td class="c4">10</td><td class="c4">11</td><td class="c3">7</td>
+</tr>
+<tr>
+<td class="c4">8</td><td class="c5">12</td><td class="c5">12</td><td class="c4">11</td><td class="c3">7</td>
+</tr>
+<tr>
+<td class="c4">8</td><td class="c6">13</td><td class="c6">14</td><td class="c6">14</td><td class="c6">14</td>
+</tr>
+<tr>
+<td class="c4">8</td><td class="c6">13</td><td class="c7">15</td><td class="c7">15</td><td class="c7">16</td>
+</tr>
+<tr>
+<td class="c4">8</td><td class="c6">13</td><td class="c8">17</td><td class="c8">17</td><td class="c8">17</td>
+</tr>
+</tbody>
+</table>
+ 
+  <br>
+ 
+  <h2 align="justify">Tabla </h2>
+<table class="tabla-colores-2">
+<thead>
+<tr>
+<th class="c9">1</th><th class="c9" colspan="2">2</th><th class="c9" colspan="2">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c10" colspan="2" rowspan="2">4</td><td class="c10" colspan="3">5</td>
+</tr>
+<tr>
+<td class="c11" colspan="2">6</td><td class="c11" rowspan="3">7</td>
+</tr>
+<tr>
+<td class="c12" rowspan="5">8</td><td class="c12">9</td><td class="c12">10</td><td class="c13" rowspan="2">11</td>
+</tr>
+<tr>
+<td class="c14" colspan="2">12</td>
+</tr>
+<tr>
+<td class="c15" rowspan="3">13</td><td class="c15" colspan="3">14</td>
+</tr>
+<tr>
+<td class="c16" colspan="2">15</td><td class="c16">16</td>
+</tr>
+<tr>
+<td class="c17" colspan="3">17</td>
+</tr>
+</tbody>
+</table>
+ 
+ 
+  <br>
+ 
+  <h2 align="justify">Tabla </h2>
+<table class="tabla-estructura">
+<tbody>
+<tr>
+<td rowspan="9">A</td><td rowspan="8">B</td><td rowspan="7">C</td><td rowspan="6">D</td>
+<td rowspan="5">E</td><td rowspan="4">F</td><td>AH</td><td rowspan="4">H</td>
+<td rowspan="5">I</td><td rowspan="6">J</td><td rowspan="7">K</td><td rowspan="9">L</td><td rowspan="10">M</td>
+</tr>
+<tr><td>G</td></tr>
+<tr><td>GH</td></tr>
+<tr><td>N</td></tr>
+<tr><td colspan="3">O</td></tr>
+<tr><td colspan="5">P</td></tr>
+<tr><td colspan="7">Q</td></tr>
+<tr>
+<td colspan="2">R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td colspan="2">X</td>
+</tr>
+<tr><td colspan="10">Y</td></tr>
+<tr>
+<td colspan="2">z</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+<td>8</td><td>9</td><td>10</td>
+</tr>
+</tbody>
+</table>
+ 
+</body>
+</html>
+tiene menú contextual
