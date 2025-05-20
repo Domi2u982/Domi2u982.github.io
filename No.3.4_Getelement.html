@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Unidad 3 | Actividad 04</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="Autor" content="Rivera Avila Dominic Alberto">
+  <meta name="Fecha" content="07 de mayo de 2025">
+  <meta name="Descripción" content="JavaScript">
+  <style>
+    i {
+      text-transform: uppercase;
+      color: white;
+      background-color: navy;
+    }
+  </style>
+</head>
+<body>
+  <h1>Unidad 3 | Actividad 04 :: Tema (JavaScript)</h1>
+  <ol>
+    <li id="valor_1"><strong>USPLP</strong></li>
+    <li id="valor_2"></li><li id="valor_3"></li><li id="valor_4"></li><li id="valor_5"></li><li id="valor_6"></li>
+    <li id="valor_7"><strong> ITESM <i>Campus San Luis Potosí</i> </strong></li>
+    <li id="valor_8"></li><li id="valor_9"></li><li id="valor_10"></li>
+  </ol>
+ 
+  <script>
+    // Asignar contenido
+    document.getElementById("valor_2").textContent = 'UCEM';
+ 
+    // Recuperar contenido
+    var temp = document.getElementById("valor_2").textContent;
+    document.getElementById("valor_3").textContent = temp + "!!!";
+ 
+    // textContent
+    temp = document.getElementById("valor_7").textContent;
+    document.getElementById("valor_6").textContent = temp;
+ 
+    // innerText
+    var tempText = document.getElementById("valor_7").innerText;
+    document.getElementById("valor_5").innerText = tempText;
+ 
+    // innerHTML
+    var tempHTML = document.getElementById("valor_7").innerHTML;
+    document.getElementById("valor_10").innerHTML = tempHTML;
+  </script>
+</body>
+</html>

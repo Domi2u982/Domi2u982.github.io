@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Unidad 3 | Actividad 06</title>
+  <meta name="Autor" content="Rivera Avila Dominic Alberto">
+  <meta name="Fecha" content="12 de mayo de 2025">
+  <meta name="Descripción" content="JavaScript">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    p {
+      color: limegreen;
+      background-color: black;
+      border: crimson 2px dashed;
+    }
+  </style>
+  <script>
+    function funcionClick() {
+      document.getElementById("varParrafo").innerHTML += "Hola mundo con Click!!!<br>";
+    }
+
+    function funcionDoble() {
+      document.getElementById("varParrafo").innerHTML += "Hola mundo con DobleClick!!!<br>";
+    }
+
+    function funcionValidar() {
+      if (navigator.cookieEnabled == true) {
+        alert("Bienvenido a mi sitio web!!!");
+      }
+    }
+
+    function funcionOver(obj) {
+      obj.style.backgroundColor = "Navy";
+    }
+
+    function funcionOut(obj) {
+      obj.style.backgroundColor = "Black";
+    }
+
+    function cambiaColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</head>
+<body onload="funcionValidar()">
+  <h1>Unidad 3 | Actividad 06 :: Tema (JavaScript - Eventos)</h1>
+  <h3>Presiona el botón para ejecutar el código.</h3>
+
+  <button onclick="funcionClick()" ondblclick="funcionDoble()">Acción...</button>
+
+  <p id="varParrafo" onmouseover="funcionOver(this)" onmouseout="funcionOut(this)"></p>
+
+  <fieldset>
+    <legend>Elige un color fondo...</legend>
+    <button onclick="cambiaColor('SteelBlue')">Azul</button>
+    <button onclick="cambiaColor('Crimson')">Rojo</button>
+    <button onclick="cambiaColor('SeaGreen')">Verde</button>
+  </fieldset>
+</body>
+</html>
