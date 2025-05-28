@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lugares icónicos - Información</title> 
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://images.ctfassets.net/wn7ipiv9ue5v/NwgElAZU8ZdLmW6v7812Y/3d8a8eb721c109b12bbc2422ba8b4f68/3-4_GTA--Gen_9_Vista_Reshoot_CF__3___1_.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .header {
+      background-color: #0073e6;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #ffcc00;
+    }
+
+    .search-bar input {
+      width: 60%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    nav {
+      background-color: #0073e6;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    nav ul li:hover {
+      transform: scale(1.3);
+      z-index: 999;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li:hover > a {
+      background-color: #005bb5;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0073e6;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #0073e6;
+      min-width: 200px;
+    }
+
+    nav ul li ul li:hover > ul {
+      display: block;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .character-section, .location-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      iframe {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    #consolas {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    #consolas h2 {
+      font-size: 28px;
+      color: #cce7ff;
+    }
+
+    #consolas p {
+      font-size: 20px;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .platform-list {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .platform {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .platform img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+    }
+
+    .platform a {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .platform a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      #consolas {
+        padding: 15px;
+      }
+
+      #consolas h2 {
+        font-size: 24px;
+      }
+
+      #consolas p {
+        font-size: 18px;
+      }
+
+      .platform a {
+        font-size: 18px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>GTA Franquicia</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar...">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="Contraportada.html">Portada</a></li>
+      <li>
+        <a href="#history">Historia</a>
+        <ul>
+          <li><a href="sanandreas.html">GTA: San Andreas</a></li>
+          <li><a href="vicecity.html">GTA: Vice City</a></li>
+          <li><a href="GTAIII.html">GTA III</a></li>
+          <li><a href="liberty.html">GTA: Liberty City Stories</a></li>
+          <li><a href="gta4.html">GTA IV</a></li>
+          <li><a href="gta5.html">GTA V</a></li>
+          <li><a href="gta6.html">GTA VI</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="personajes.html">Personajes</a>
+      </li>
+      <li>
+        <a href="lugares.html">Lugares icónicos</a>
+      </li>
+      <li><a href="extras_noticias.html">Extra y noticias</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección de Lugares Icónicos por Juego -->
+<div class="content">
+  <h2>Lugares Icónicos en la Saga GTA</h2>
+
+  <h2>Grand Theft Auto San Andreas</h2>
+  <div class="location-section">
+    <div class="card">
+      <img src="https://gtwfilesie-thumb.grandtheftwiki.com/EastLosSantos-GTASA-northeastwards.jpg/1200px-EastLosSantos-GTASA-northeastwards.jpg" alt="Los Santos"/>
+      <p><strong>Los Santos</strong><br>Ciudad principal inspirada en Los Ángeles, epicentro de crímenes y leyendas urbanas.</p>
+    </div>
+    <div class="card">
+      <img src="https://www.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2015/02/447816-san-fierro.jpg" alt="San Fierro"/>
+      <p><strong>San Fierro</strong><br>Ciudad vibrante inspirada en San Francisco, llena de cultura y desafíos urbanos.</p>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsdAra6rnBpxDRPdg9UR2qqsWc49vbyf2FiA&s" alt="Las Venturas"/>
+      <p><strong>Las Venturas</strong><br>Ciudad inspirada en Las Vegas, reconocida por sus casinos y vida nocturna.</p>
+    </div>
+    <div class="card">
+      <img src="https://staticg.sportskeeda.com/editor/2021/08/5ac67-16283583028799-800.jpg?w=640" alt="Grove Street"/>
+      <p><strong>Grove Street</strong><br>El corazón de los Grove Street Families, símbolo de resistencia y lealtad.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2015/02/447794-campo.jpg?tf=3840x" alt="Campo de San Andreas"/>
+      <p><strong>Campo de San Andreas</strong><br>Extensas áreas rurales que esconden secretos y paisajes inolvidables.</p>
+    </div>
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/gtaxfilesiv/images/d/d4/Area69Portal.jpg/revision/latest?cb=20170313000200" alt="Área 69"/>
+      <p><strong>Área 69</strong><br>Una zona misteriosa y restringida, llena de teorías conspirativas y secretos.</p>
+    </div>
+  </div>
+
+  <h2>Grand Theft Auto Vice City</h2>
+  <div class="location-section">
+    <div class="card">
+      <img src="https://cdn2.unrealengine.com/egs-grandtheftautovicecitythedefinitiveedition-rockstargames-g1a-00-1920x1080-a93053f8548a.jpg" alt="Vice City"/>
+      <p><strong>Vice City</strong><br>La ciudad en sí, repleta de neones, palmeras y un ambiente inigualable inspirado en el Miami de los 80.</p>
+    </div>
+    <div class="card">
+      <img src="https://pbs.twimg.com/ext_tw_video_thumb/1513927131717259267/pu/img/ij7uDstf8BG8Ew9U.jpg:large" alt="Ocean Beach"/>
+      <p><strong>Ocean Beach</strong><br>Una de las zonas más emblemáticas, perfecta para disfrutar de las playas y vida nocturna de Vice City.</p>
+    </div>
+    <div class="card">
+      <img src="https://www.igrandtheftauto.com/img/content/150x113/2641.jpg" alt="Vice Point"/>
+      <p><strong>Vice Point</strong><br>Elevada zona residencial que ofrece una vista panorámica y es escenario de diversos secretos urbanos.</p>
+    </div>
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/jv_KVkc5Xrc/hqdefault.jpg" alt="Vercetti Estate"/>
+      <p><strong>Vercetti Estate</strong><br>Mansión lujosa y opulenta que simboliza el ascenso de Tommy en el mundo criminal.</p>
+    </div>
+    <div class="card">
+      <img src="https://www.igrandtheftauto.com/content/images/lg/2644-gtavc-downtown-vice-city.jpg?etag=4ac81522" alt="Downtown Vice City"/>
+      <p><strong>Downtown Vice City</strong><br>Zona del centro urbano, llena de vida, comercio y la inconfundible estética ochentera.</p>
+    </div>
+  </div>
+
+  <h2>Grand Theft Auto III</h2>
+    <div class="location-section">
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/gtawiki/images/e/e3/Portland-GTAIII-Map.png/revision/latest?cb=20201024223045" alt="Portland">
+        <p><strong>Portland</strong><br>Zona industrial y punto inicial del juego.</p>
+      </div>
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/gtawiki/images/e/ef/StauntonIsland-GTALCS-Map.png/revision/latest?cb=20201024223246" alt="Staunton Island">
+        <p><strong>Staunton Island</strong><br>Centro financiero de Liberty City.</p>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXmDKAaQXHpMDD-ktoD7t087NAQc6OkemQIp6nh8ndmI7PdjBE_y6qYigFbZOGhCTrL1Y&usqp=CAU" alt="Shoreside Vale">
+        <p><strong>Shoreside Vale</strong><br>Área suburbana con mansiones y el aeropuerto.</p>
+      </div>
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/esgta/images/8/88/CallhanBridgeda%C3%B1ado.png/revision/latest/scale-to-width-down/250?cb=20111119012318" alt="Puente Callahan">
+        <p><strong>Puente Callahan</strong><br>Punto clave que conecta las islas.</p>
+      </div>
+    </div>
+
+  <h2>Grand Theft Auto Liberty city </h2>
+    <div class="location-section">
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/gtawiki/images/0/00/SaintMarks-GTALCS-Map.png/revision/latest?cb=20190409110951" alt="Portland">
+        <p><strong>St. Mark’s</strong><br>Zona central de la mafia Leone y hogar de Toni.</p>
+      </div>
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/gtawiki/images/0/0a/RedLightDistrict-GTALCS-Map.png/revision/latest?cb=20190409110949" alt="Staunton Island">
+        <p><strong>Red Light District</strong><br>Barrio rojo y punto de inicio del juego.</p>
+      </div>
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/gtawiki/images/e/ef/StauntonIsland-GTALCS-Map.png/revision/latest?cb=20201024223246" alt="Shoreside Vale">
+        <p><strong>Staunton Island</strong><br>Área rica y moderna, centro de poder y conflictos.</p>
+      </div>
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/gtawiki/images/5/5c/FortStaunton-GTALCS-Map.png/revision/latest?cb=20200205181931" alt="Puente Callahan">
+        <p><strong>Fort Staunton</strong><br>Destruido durante la historia; clave en el cambio de poder.</p>
+      </div>
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/gtawiki/images/0/0f/ShoresideVale-GTALCS-Map.png/revision/latest?cb=20201024223223" alt="Puente Callahan">
+        <p><strong>Shoreside Vale</strong><br>Zona suburbana con el aeropuerto y casas de mafiosos.</p>
+      </div>
+      <div class="card">
+        <img src="https://static.wikia.nocookie.net/gtawiki/images/1/1f/FrancisInternationalAirport-GTA3-mainterminal.jpg/revision/latest?cb=20091107183441" alt="Puente Callahan">
+        <p><strong>Francis International Airport</strong><br>Escenario de misiones críticas y fugas.</p>
+      </div>
+    </div>
+
+  <h2>Grand Theft Auto IV</h2>
+  <div class="location-section">
+    <div class="card">
+      <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/11/6-2.jpg" alt="Liberty City"/>
+      <p><strong>Liberty City</strong><br>La ciudad vibrante y caótica que sirve como escenario principal, inspirada en la Nueva York real.</p>
+    </div>
+    <div class="card">
+      <img src="https://gtwfilesie-thumb.grandtheftwiki.com/CityHall-GTAIV-northwards.jpg/350px-CityHall-GTAIV-northwards.jpg" alt="Algonquin"/>
+      <p><strong>Algonquin</strong><br>Distrito inspirado en Manhattan, centro neurálgico de actividad, negocios y crimen en Liberty City.</p>
+    </div>
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/esgta/images/f/fe/Dukes_distrito_GTA_IV.png/revision/latest/scale-to-width-down/1200?cb=20100725190343" alt="Dukes"/>
+      <p><strong>Dukes</strong><br>Barrio con influencia residencial e industrial, basado en zonas de Queens.</p>
+    </div>
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/gtawiki/images/7/70/SouthBohan-GTA4-westwards.jpg/revision/latest?cb=20090828151016" alt="Bohan"/>
+      <p><strong>Bohan</strong><br>Un distrito duro inspirado en el Bronx, donde la lucha por la supervivencia es cotidiana.</p>
+    </div>
+  </div>
+
+  <h2>Grand Theft Auto V</h2>
+    <div class="location-section">
+      <div class="card">
+        <img src="data:image/jpeg;base64,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" alt="Los Santos">
+        <p><strong>Los Santos</strong><br>La ciudad principal y núcleo del juego. Todo gira alrededor de ella: misiones, negocios y conflictos.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn.alfabetajuega.com/alfabetajuega/abj_public_files/multimedia/imagenes/201705/192449.alfabetajuega-gta-v-monte-chiliad-1-250517.png" alt="Monte Chiliad">
+        <p><strong>Mount Chiliad</strong><br>No solo es el punto más alto del mapa, sino también centro de uno de los misterios más famosos del juego.</p>
+      </div>
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.XXEVspS6IEeF5omfGnTM3QAAAA?rs=1&pid=ImgDetMain" alt="Maze Bank">
+        <p><strong>Maze Bank Tower</strong><br>Símbolo de poder económico en el juego. Es el edificio más alto y muy visible desde casi cualquier parte del mapa.</p>
+      </div>
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.b_gusLC7oFO_lr8nmqGZfgHaDt?rs=1&pid=ImgDetMain">
+        <p><strong>Vinewood Hills / Sign</strong><br>Zona de lujo y el famoso letrero que parodia "Hollywood", muy representativo del estilo del juego.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.gta5-mods.com/q75/images/sandy-shores-enhancement/912986-GTA5%202015-11-22%2017-16-49-49.jpg">
+        <p><strong>Sandy Shores</strong><br>Pueblo clave en la historia de Trevor. Representa la vida fuera de la ciudad, con mucho contenido y actividades.</p>
+      </div>
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/LXtB8qX3QF4/sddefault.jpg" alt="Tienda de Zapatillaz ">
+        <p><strong>Tienda de Zapatillaz </strong><br>Este peculiar edificio tiene una enorme zapatilla deportiva en su techo y se encuentra en Los Santos, muy cerca de la autopista y zonas industriales. Es parte de la marca de ropa deportiva ProLaps, una de las tiendas de ropa del juego</p>
+      </div>
+    </div>
+    
+    
+</div>
+</body>
+</html>
