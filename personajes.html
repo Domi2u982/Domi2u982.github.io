@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTA Personajes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/86f4cb49763c34e9816535006f5e6a08.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .header {
+      background-color: #0073e6;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #ffcc00;
+    }
+
+    .search-bar input {
+      width: 60%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    nav {
+      background-color: #0073e6;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    nav ul li:hover {
+      transform: scale(1.3);
+      z-index: 999;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li:hover > a {
+      background-color: #005bb5;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0073e6;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #0073e6;
+      min-width: 200px;
+    }
+
+    nav ul li ul li:hover > ul {
+      display: block;
+    }
+
+    /* El recuadro semitransparente se aplica a .content y .text-box */
+    .content, .text-box {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>GTA Franquicia</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar...">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="Contraportada">Portada</a></li>
+       <li>
+        <a href="#history">Historia</a>
+        <ul>
+          <li><a href="sanandreas">GTA: San Andreas</a></li>
+          <li><a href="vicecity">GTA: Vice City</a></li>
+          <li><a href="GTAIII.html">GTA III</a></li>
+	  <li><a href="liberty.html">GTA: Liberty City Stories</a></li>
+          <li><a href="gta4.html">GTA IV</a></li>
+          <li><a href="gta5.html">GTA V</a></li>
+          <li><a href="gta6">GTA VI</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="personajes.html">Personajes</a>
+      </li>
+      <li>
+        <a href="lugares.html">Lugares icónicos</a>
+      </li>
+      <li><a href="extras_noticias.html">Extra y noticias</a></li>
+    </ul>
+  </nav>
+
+  <div class="text-box">
+<section id="personajes">
+  <h1>Personajes de GTA</h1>
+
+  <!-- GTA San Andreas -->
+  <article id="gta-san-andreas">
+    <h2>GTA San Andreas</h2>
+    <div class="category">
+      <h3>Principales</h3>
+      <ul>
+        <li>
+          <strong>Carl "CJ" Johnson</strong>
+          <p>Protagonista que regresa a Los Santos tras años de ausencia, decidido a restaurar el honor familiar y recuperar el control de su barrio.</p>
+        </li>
+        <li>
+          <strong>Sean "Sweet" Johnson</strong>
+          <p>Hermano mayor de CJ y líder de la familia, comprometido con mantener unida a la comunidad a pesar de los conflictos internos.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Secundarios</h3>
+      <ul>
+        <li>
+          <strong>Lance "Ryder" Wilson</strong>
+          <p>Miembro impulsivo y violento de la pandilla, cuya actitud rebelde lo hace impredecible.</p>
+        </li>
+        <li>
+          <strong>OG Loc</strong>
+          <p>Aspirante a gangster que, pese a sus intentos, se muestra torpe en su camino por ganarse un lugar en la jerarquía.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Antagonistas</h3>
+      <ul>
+        <li>
+          <strong>Frank Tenpenny</strong>
+          <p>Policía corrupto que manipula a las pandillas para sus propios fines, representando la corrupción institucional.</p>
+        </li>
+        <li>
+          <strong>Eddie Pulaski</strong>
+          <p>Mano derecha de Tenpenny, cuya brutalidad y falta de escrúpulos acentúan el conflicto en la historia.</p>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- GTA Vice City -->
+  <article id="gta-vice-city">
+    <h2>GTA Vice City</h2>
+    <div class="category">
+      <h3>Principales</h3>
+      <ul>
+        <li>
+          <strong>Tommy Vercetti</strong>
+          <p>Exconvicto endurecido que irrumpe en Vice City, utilizando tanto la astucia como la fuerza para forjar su propio imperio criminal.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Secundarios</h3>
+      <ul>
+        <li>
+          <strong>Lance Vance</strong>
+          <p>Hustler callejero y compañero de Tommy, con una ambición que a veces lo lleva a actuar de forma impredecible.</p>
+        </li>
+        <li>
+          <strong>Ken Rosenberg</strong>
+          <p>Abogado nervioso que asiste a Tommy, siempre enfrentando conflictos éticos y situaciones llenas de tensión.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Antagonistas</h3>
+      <ul>
+        <li>
+          <strong>Sonny Forelli</strong>
+          <p>Jefe implacable de la familia Forelli, cuya influencia y manipulación amenazan el ascenso de Tommy.</p>
+        </li>
+        <li>
+          <strong>Ricardo Díaz</strong>
+          <p>Narcotraficante violento que controla territorios estratégicos de Vice City con mano dura y extravagancia.</p>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- GTA III -->
+  <article id="gta-3">
+    <h2>GTA III</h2>
+    <div class="category">
+      <h3>Principales</h3>
+      <ul>
+        <li>
+          <strong>Claude</strong>
+          <p>Protagonista silencioso y enigmático cuya sed de venganza impulsa la trama en una caótica Liberty City.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Secundarios</h3>
+      <ul>
+        <li>
+          <strong>Salvatore Leone</strong>
+          <p>El patriarca de la familia criminal Leone, influenciador clave en el submundo de Liberty City.</p>
+        </li>
+        <li>
+          <strong>Ray Machowski</strong>
+          <p>Asociado de moral ambigua, involucrado en negocios turbios y lavado de dinero, siempre al límite de la ley.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Antagonistas</h3>
+      <ul>
+        <li>
+          <strong>Catalina</strong>
+          <p>Criminal impredecible y traicionera, cuyo carácter inestable es el detonante de múltiples conflictos.</p>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- GTA Liberty City Stories -->
+  <article id="gta-liberty">
+    <h2>GTA Liberty City Stories</h2>
+    <div class="category">
+      <h3>Principales</h3>
+      <ul>
+        <li>
+          <strong>Toni Cipriani</strong>
+          <p>Gangster leal y calculador, que lucha por ascender en la organización criminal de Liberty City en medio de la traición.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Secundarios</h3>
+      <ul>
+        <li>
+          <strong>Compañeros de Toni</strong>
+          <p>Diversos personajes que lo asisten, cada uno aportando habilidades y personalidades únicas en la vida del crimen.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Antagonistas</h3>
+      <ul>
+        <li>
+          <strong>Bandas rivales</strong>
+          <p>Grupos enemigos que se oponen a Toni, personificando la traición y la lucha por el poder en la ciudad.</p>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- GTA IV -->
+  <article id="gta-iv">
+    <h2>GTA IV</h2>
+    <div class="category">
+      <h3>Principales</h3>
+      <ul>
+        <li>
+          <strong>Niko Bellic</strong>
+          <p>Inmigrante del este de Europa en busca de un nuevo comienzo, marcado por un tumultuoso pasado y dilemas de lealtad.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Secundarios</h3>
+      <ul>
+        <li>
+          <strong>Roman Bellic</strong>
+          <p>Familiar cercano de Niko, cuyo optimismo ingenuo y mala fortuna lo arrastran a situaciones peligrosas.</p>
+        </li>
+        <li>
+          <strong>Little Jacob</strong>
+          <p>Amigo leal de Niko, originario de Jamaica, que aporta calma y fuerza en medio del conflicto.</p>
+        </li>
+        <li>
+          <strong>Packie McReary</strong>
+          <p>Integrante de una familia criminal irlandesa, reconocido por su audacia y un fuerte sentido del honor.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Antagonistas</h3>
+      <ul>
+        <li>
+          <strong>Dimitri Rascalov</strong>
+          <p>Figura traicionera y calculadora cuya duplicidad complica el camino de Niko en Liberty City.</p>
+        </li>
+        <li>
+          <strong>Mikhail Faustin</strong>
+          <p>Gangster volátil y violento, cuyo comportamiento errático genera constantes enfrentamientos.</p>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- GTA V -->
+  <article id="gta-v">
+    <h2>GTA V</h2>
+    <div class="category">
+      <h3>Principales</h3>
+      <ul>
+        <li>
+          <strong>Michael De Santa</strong>
+          <p>Ex delincuente que vive un aparente retiro, pero se ve envuelto en conflictos internos y familiares que lo obligan a volver al crimen.</p>
+        </li>
+        <li>
+          <strong>Franklin Clinton</strong>
+          <p>Joven ambicioso que lucha por escapar de la marginalidad, enfrentándose a dilemas éticos en su ascenso social.</p>
+        </li>
+        <li>
+          <strong>Trevor Philips</strong>
+          <p>Criminal explosivo y caótico, que encarna el lado más salvaje y descontrolado del inframundo.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Secundarios</h3>
+      <ul>
+        <li>
+          <strong>Lester Crest</strong>
+          <p>Crack informático y estratega en robos, cuya visión y habilidades son cruciales para planificar operaciones de alto riesgo.</p>
+        </li>
+        <li>
+          <strong>Ron Jakowski</strong>
+          <p>Compañero nervioso y leal de Trevor, cuya inquietud contrasta con la explosividad de su líder.</p>
+        </li>
+        <li>
+          <strong>Wade</strong>
+          <p>Acompañante ingenuo y a menudo cómico, que aporta un toque de ligereza en medio de la tensión del grupo.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Antagonistas</h3>
+      <ul>
+        <li>
+          <strong>Steve Haines</strong>
+          <p>Agente gubernamental corrupto, cuyos designios y manipulaciones impulsan el conflicto y la intriga en la historia.</p>
+        </li>
+        <li>
+          <strong>Devin Weston</strong>
+          <p>Magnate despiadado cuyo implacable afán por el poder y las finanzas choca frontalmente con los principios de los protagonistas.</p>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- GTA Online -->
+  <article id="gta-online">
+    <h2>GTA Online</h2>
+    <div class="category">
+      <h3>Principales</h3>
+      <ul>
+        <li>
+          <strong>El Jugador (Avatar Personalizado)</strong>
+          <p>El protagonista que tú defines, con una historia que se construye de manera dinámica a lo largo del juego online.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Secundarios</h3>
+      <ul>
+        <li>
+          <strong>Personajes NPC</strong>
+          <p>Figuras como Lester Crest y otros guías que asignan misiones y aportan dinamismo y dirección en el vasto mundo online.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="category">
+      <h3>Antagonistas</h3>
+      <ul>
+        <li>
+          <strong>Enemigos Online</strong>
+          <p>Rivales y desafíos constantes que surgen en el entorno multijugador, poniendo a prueba tus habilidades y estrategia.</p>
+        </li>
+      </ul>
+    </div>
+  </article>
+</section>
+  </div>
+</body>
+</html>
