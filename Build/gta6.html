@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTA IV- Información</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      .montserrat { font-family: 'Montserrat', sans-serif; }
+      margin: 0;
+      padding: 0;
+      background: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2023/12/gta-6-3243960.jpg?tf=3840x') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .header {
+      background-color: #0073e6;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #ffcc00;
+    }
+
+    .search-bar input {
+      width: 60%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    nav {
+      background-color: #0073e6;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    nav ul li:hover {
+      transform: scale(1.3);
+      z-index: 999;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li:hover > a {
+      background-color: #005bb5;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0073e6;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #0073e6;
+      min-width: 200px;
+    }
+
+    nav ul li ul li:hover > ul {
+      display: block;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .character-section, .location-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+    iframe {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+#consolas {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+#consolas h2 {
+  font-size: 28px;
+  color: #cce7ff;
+}
+
+#consolas p {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.platform-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  text-decoration: none;
+  color: white;
+}
+
+.platform img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.platform a {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white; /* Mantiene el color del enlace sin cambios */
+}
+
+.platform a:hover {
+  text-decoration: underline; /* Efecto al pasar el cursor */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  #consolas {
+    padding: 15px;
+  }
+
+  #consolas h2 {
+    font-size: 24px;
+  }
+
+  #consolas p {
+    font-size: 18px;
+  }
+
+  .platform a {
+    font-size: 18px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>GTA Franquicia</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar...">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="Contraportada.html">Portada</a></li>
+      <li>
+        <a href="#history">Historia</a>
+        <ul>
+          <li><a href="sanandreas">GTA: San Andreas</a></li>
+          <li><a href="vicecity">GTA: Vice City</a></li>
+          <li><a href="GTAIII.html">GTA III</a></li>
+	  <li><a href="liberty.html">GTA: Liberty City Stories</a></li>
+          <li><a href="gta4.html">GTA IV</a></li>
+          <li><a href="gta5.html">GTA V</a></li>
+          <li><a href="gta6">GTA VI</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="personajes.html">Personajes</a>
+      </li>
+      <li>
+        <a href="lugares.html">Lugares icónicos</a>
+      </li>
+      <li><a href="extras_noticias.html">Extra y noticias</a></li>
+    </ul>
+  </nav>
+
+
+<div class="content">
+<!-- GTA VI - Historia -->
+<h2>GTA VI - Historia</h2>
+<p>
+  Grand Theft Auto VI se sitúa en Vice City y en el extenso estado de Leonida, una representación ficticia inspirada en Florida. La historia sigue a <strong>Jason Duval</strong> y <strong>Lucia Caminos</strong>, dos protagonistas cuyas vidas se entrelazan en una saga criminal al estilo Bonnie &amp; Clyde. Tras un golpe aparentemente sencillo que sale mal, ambos se ven inmersos en una conspiración criminal que desafía sus límites y los obliga a confiar el uno en el otro para sobrevivir en un mundo lleno de traiciones y desafíos.
+</p>
+
+<!-- Consolas -->
+<h2>Consolas en las que saldrá GTA VI</h2>
+<section id="consolas">
+  <p>Grand Theft Auto VI será lanzado inicialmente para las siguientes plataformas:</p>
+  <div class="platform-list">
+    <div class="platform">
+      <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/01/ps5-logo.jpg?tf=3840x" alt="PlayStation 5">
+      <a href="https://www.rockstargames.com/VI" target="_blank">PlayStation 5</a>
+    </div>
+    <div class="platform">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiP9hb2cJTn8OyrCvPqQmFHSEthLM7JANf0w&s" alt="Xbox Series X|S">
+      <a href="https://www.rockstargames.com/VI" target="_blank">Xbox Series X|S</a>
+    </div>
+  </div>
+</section>
+
+<!-- Trailer -->
+<h2>GTA VI - Trailer 1</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0?si=pScz3XrhS5p1vuMK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h2>GTA VI - Trailer 2</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VQRLujxTm3c?si=_6sUW7n-3PQzzATw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- Mapa -->
+<h2>Mapa de GTA VI(Especulaciones acerca de como sera)</h2>
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25638c54-dc52-4ce7-92d4-65637f102a98/deoo6aq-1f85f18f-44f5-422e-a0c0-b012d999065c.jpg/v1/fill/w_729,h_1095,q_70,strp/gta_6__grand_theft_auto_vi__vice_city_map_4_4_by_avatar_sd_deoo6aq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODg2NyIsInBhdGgiOiJcL2ZcLzI1NjM4YzU0LWRjNTItNGNlNy05MmQ0LTY1NjM3ZjEwMmE5OFwvZGVvbzZhcS0xZjg1ZjE4Zi00NGY1LTQyMmUtYTBjMC1iMDEyZDk5OTA2NWMuanBnIiwid2lkdGgiOiI8PTU5MDYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.EuvYhXjDKXOx973BAj3RzJFWg4o0irgHtVo09EFlVc0" alt="Mapa de Vice City y Leonida" />
+
+<!-- Personajes Principales -->
+<h2>Personajes Principales</h2>
+<div class="character-section">
+  <div class="card">
+    <img src="https://static.wikia.nocookie.net/esgta/images/f/f8/Jason_Duval.png/revision/latest?cb=20250506164144" alt="Jason Duval"/>
+    <p><strong>Jason Duval</strong><br>
+      Un delincuente con un pasado marcado por la vida entre grifters y criminales. Buscando una existencia sin complicaciones, su destino lo arrastra a conspiraciones y traiciones en el corazón de Leonida.
+    </p>
+  </div>
+  <div class="card">
+    <img src="https://static.wikia.nocookie.net/esgta/images/f/ff/Lucia_Caminos.jpg/revision/latest?cb=20250508004819" alt="Lucia Caminos"/>
+    <p><strong>Lucia Caminos</strong><br>
+      Recién salida del sistema penitenciario, Lucia es una mujer decidida a tomar las riendas de su destino, dispuesta a desafiar las reglas del crimen en Vice City para alcanzar la vida que siempre soñó.
+    </p>
+  </div>
+  <ul>
+    <li><strong>Jason Duval:</strong> Criado en un ambiente delictivo, su vida se complica al enfrentarse a conspiraciones de gran escala en un mundo sin ley.</li>
+    <li><strong>Lucia Caminos:</strong> Con un espíritu indomable forjado en la adversidad, lucha por la redención y el control de su destino en una ciudad llena de sombras.</li>
+  </ul>
+</div>
+  
+</div>
+
+    </div>
+  </div>
+</div>
+</body>
