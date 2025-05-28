@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTA San andreas- Información</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      .montserrat { font-family: 'Montserrat', sans-serif; }
+      margin: 0;
+      padding: 0;
+      background: url('https://images.ctfassets.net/wn7ipiv9ue5v/NwgElAZU8ZdLmW6v7812Y/3d8a8eb721c109b12bbc2422ba8b4f68/3-4_GTA--Gen_9_Vista_Reshoot_CF__3___1_.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .header {
+      background-color: #0073e6;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #ffcc00;
+    }
+
+    .search-bar input {
+      width: 60%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    nav {
+      background-color: #0073e6;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    nav ul li:hover {
+      transform: scale(1.3);
+      z-index: 999;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li:hover > a {
+      background-color: #005bb5;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0073e6;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #0073e6;
+      min-width: 200px;
+    }
+
+    nav ul li ul li:hover > ul {
+      display: block;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .character-section, .location-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+    iframe {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+#consolas {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+#consolas h2 {
+  font-size: 28px;
+  color: #cce7ff;
+}
+
+#consolas p {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.platform-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  text-decoration: none;
+  color: white;
+}
+
+.platform img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.platform a {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white; /* Mantiene el color del enlace sin cambios */
+}
+
+.platform a:hover {
+  text-decoration: underline; /* Efecto al pasar el cursor */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  #consolas {
+    padding: 15px;
+  }
+
+  #consolas h2 {
+    font-size: 24px;
+  }
+
+  #consolas p {
+    font-size: 18px;
+  }
+
+  .platform a {
+    font-size: 18px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>GTA Franquicia</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar...">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="Contraportada.html">Portada</a></li>
+      <li>
+        <a href="#history">Historia</a>
+        <ul>
+          <li><a href="sanandreas.html">GTA: San Andreas</a></li>
+          <li><a href="vicecity.html">GTA: Vice City</a></li>
+          <li><a href="GTAIII.html">GTA III</a></li>
+	  <li><a href="liberty.html">GTA: Liberty City Stories</a></li>
+          <li><a href="gta4.html">GTA IV</a></li>
+          <li><a href="gta5.html">GTA V</a></li>
+          <li><a href="gta6.html">GTA VI</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="personajes.html">Personajes</a>
+      </li>
+      <li>
+        <a href="lugares.html">Lugares icónicos</a>
+      </li>
+      <li><a href="extras_noticias.html">Extra y noticias</a></li>
+    </ul>
+  </nav>
+
+
+<div class="content">
+  <h2>GTA: San Andreas - Historia</h2>
+  <p>
+    Grand Theft Auto: San Andreas se desarrolla en el estado ficticio de San Andreas, inspirado en California y Nevada durante los años 90. La historia sigue a <strong>Carl "CJ" Johnson</strong>, quien regresa a Los Santos tras la muerte de su madre. CJ debe recuperar el control de su barrio, enfrentar viejas rencillas y traiciones, y restaurar el poder de los Grove Street Families mientras se mueve entre Los Santos, San Fierro y Las Venturas.
+  </p>
+  <h2>Consolas en las que salió GTA: San Andreas</h2>
+<section id="consolas">
+  <h2>Consolas en las que salió GTA: San Andreas</h2>
+  <p>Grand Theft Auto: San Andreas fue lanzado originalmente para las siguientes plataformas:</p>
+  <div class="platform-list">
+    <div class="platform">
+      <img src="https://thumb.pccomponentes.com/w-530-530/articles/1067/10675989/1612-paladone-lampara-logo-playstation-opiniones.jpg" alt="PlayStation 2">
+      <a href="https://store.playstation.com/es-mx/concept/10003552" target="_blank">PlayStation 2</a>
+    </div>
+    <div class="platform">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Cmq241MXqEs0mu52qny9k-IpIhBlqUsHhw&s" alt="Windows">
+      <a href="https://store.steampowered.com/app/1547000/Grand_Theft_Auto_San_Andreas__The_Definitive_Edition/" target="_blank">Windows (Steam)</a>
+    </div>
+    <div class="platform">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5PZzx7CONJ2x4NcTvvUVbUUZwqvxOD0EHbnbfqXW35PAPdNMHA_vNLs1o88aYvFLNXco&usqp=CAU" alt="Xbox">
+      <a href="https://www.xbox.com/es-mx/games/store/Grand-Theft-Auto-San-Andreas/C3B11WF6SWCN" target="_blank">Xbox</a>
+    </div>
+  </div>
+</section>
+  
+ <h2>GTA: San Andreas - trailer</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yOzcbtsw_pQ?si=uNGBXboGSK2FX6Cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+
+  <h2>Mapa de GTA: San Andreas</h2>
+  <img src="https://i.blogs.es/243111/diseno-sin-titulo-20-/650_1200.jpeg"/>
+
+  <h2>Personajes Principales</h2>
+  <div class="character-section">
+    <div class="card">
+      <img src="https://i.pinimg.com/222x/65/cf/6e/65cf6e235a9ec853e855b1c643b0ecbc.jpg"/>
+      <p><strong>Carl "CJ" Johnson</strong><br>Protagonista que regresa para vengar la muerte de su madre y reunir a su familia.</p>
+    </div>
+    <div class="card">
+      <img src="https://i.namu.wiki/i/cnv186q6uq8Te0OVAkCWajmJZRti2W9d-4PGfUIIhniyyl06Yzx_YUrTiF7nsx3qtZhac5_X7yPjBoX3gNnRvQ.webp"/>
+      <p><strong>Sweet Johnson</strong><br>Líder de los Grove Street Families y hermano de CJ.</p>
+    </div>
+    <div class="card">
+      <img src="https://pm1.aminoapps.com/7413/affb52214ec3fa228285ac361ab99c1c289e3bfar1-900-900v2_00.jpg"/>
+      <p><strong>Big Smoke</strong><br>Antiguo aliado que traiciona a la pandilla en busca de poder y dinero.</p>
+    </div>
+    <ul>
+      <li><strong>CJ:</strong> Regresa a Los Santos para restaurar el honor de su familia, enfrentándose a viejas lealtades y traiciones.</li>
+      <li><strong>Sweet:</strong> Firme defensor del barrio, lucha por mantener la integridad y unidad de los Grove Street Families.</li>
+      <li><strong>Big Smoke:</strong> Su ambición lo lleva a cambiar de bando, convirtiéndose en un enemigo interno que sacrifica la lealtad por poder.</li>
+    </ul>
+  </div>
+
+
+
+  <h2>Antagonistas</h2>
+  <div class="character-section">
+    <div class="card">
+      <img src="https://imagedelivery.net/LBWXYQ-XnKSYxbZ-NuYGqQ/50b9dd5d-f9d8-4ede-b36a-f5393dde9c00/avatarhd"/>
+      <p><strong>Frank Tenpenny</strong><br>Policía corrupto que manipula a CJ y a otros para sus fines personales.</p>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPaHZlKut_XFQnkCoqPeWi67fqHYcuKZOSFIYeLJDg171llfFvunm_GVjnJ6CRL7c4yA&usqp=CAU"/>
+      <p><strong>Los Ballas</strong><br>Pandilla rival que se enfrenta a los Grove Street Families para controlar Los Santos.</p>
+    </div>
+    <div class="card">
+      <img src="https://pm1.aminoapps.com/7146/7d9493ce0ccc31ab45afd850530c7b6258676956r1-750-977v2_uhq.jpg" alt="Mike Toreno"/>
+      <p><strong>Mike Toreno</strong><br>Agente gubernamental con intenciones ocultas involucrado en operaciones clandestinas.</p>
+    </div>
+    <ul>
+      <li><strong>Frank Tenpenny:</strong> Utiliza su cargo policial para explotar y manipular a aquellos inmersos en el crimen.</li>
+      <li><strong>Los Ballas:</strong> Están dispuestos a todo para desestabilizar el poder de los Grove Street Families y expandir su territorio.</li>
+      <li><strong>Mike Toreno:</strong> Envuelto en intrigas gubernamentales, sus operaciones secretas influyen en el destino de CJ.</li>
+    </ul>
+  </div>
+
+  <h2>Personajes Secundarios</h2>
+  <div class="character-section">
+    <div class="card">
+      <img src="https://i.redd.it/di3cz3c99lpd1.png" alt="Cesar Vialpando"/>
+      <p><strong>Cesar Vialpando</strong><br>Líder de los Varrios Los Aztecas y aliado incondicional de CJ.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn.staticneo.com/w/gta/Woozie.jpg" alt="Wu Zi Mu"/>
+      <p><strong>Wu Zi Mu (Woozie)</strong><br>Líder de la mafia china en San Fierro y amigo leal de CJ.</p>
+    </div>
+    <div class="card">
+      <img src="https://assets.mycast.io/characters/catalina-4255900-normal.jpg?1642290005" alt="Catalina"/>
+      <p><strong>Catalina</strong><br>Criminal errática cuyo temperamento añade pasión y peligro a la trama.</p>
+    </div>
+    <ul>
+      <li><strong>Cesar Vialpando:</strong> Representa la fuerza y unidad de la cultura latina, apoyando a CJ en momentos cruciales.</li>
+      <li><strong>Wu Zi Mu:</strong> Estratega y aliado estratégico que ayuda a consolidar el poder en San Fierro.</li>
+      <li><strong>Catalina:</strong> Su impredecible naturaleza y pasión influyen directamente en la evolución de la historia.</li>
+    </ul>
+  </div>
+<h2>Secretos</h2>
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>El Hombre Bigfoot</td>
+      <td>Se rumorea que una criatura similar a Bigfoot acecha en los bosques y desiertos de San Andreas.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Área 69</td>
+      <td>Inspirada en la famosa Área 51, esta zona reservada oculta secretos gubernamentales y tecnología avanzada.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Grafitis ocultos</td>
+      <td>Diversas paredes y callejones esconden mensajes y referencias a otros títulos de GTA.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Espíritus en los cementerios</td>
+      <td>Algunos jugadores aseguran haber visto apariciones fantasmales que aumentan el misterio del juego.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>OVNIs en el desierto</td>
+      <td>Avistamientos de objetos voladores no identificados han alimentado numerosas teorías conspirativas.</td>
+    </tr>
+  </tbody>
+</table>
+
+  <h2>Lugares Icónicos</h2>
+  <div class="location-section">
+    <div class="card">
+      <img src="https://gtwfilesie-thumb.grandtheftwiki.com/EastLosSantos-GTASA-northeastwards.jpg/1200px-EastLosSantos-GTASA-northeastwards.jpg" alt="Los Santos"/>
+      <p><strong>Los Santos</strong><br>Ciudad principal inspirada en Los Ángeles, epicentro de crímenes y leyendas urbanas.</p>
+    </div>
+    <div class="card">
+      <img src="https://www.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2015/02/447816-san-fierro.jpg" alt="San Fierro"/>
+      <p><strong>San Fierro</strong><br>Ciudad vibrante inspirada en San Francisco, llena de cultura y desafíos urbanos.</p>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsdAra6rnBpxDRPdg9UR2qqsWc49vbyf2FiA&s" alt="Las Venturas"/>
+      <p><strong>Las Venturas</strong><br>Ciudad inspirada en Las Vegas, reconocida por sus casinos y vida nocturna.</p>
+    </div>
+    <div class="card">
+      <img src="https://staticg.sportskeeda.com/editor/2021/08/5ac67-16283583028799-800.jpg?w=640" alt="Grove Street"/>
+      <p><strong>Grove Street</strong><br>El corazón de los Grove Street Families, símbolo de resistencia y lealtad.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2015/02/447794-campo.jpg?tf=3840x" alt="Campo de San Andreas"/>
+      <p><strong>Campo de San Andreas</strong><br>Extensas áreas rurales que esconden secretos y paisajes inolvidables.</p>
+    </div>
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/gtaxfilesiv/images/d/d4/Area69Portal.jpg/revision/latest?cb=20170313000200" alt="Área 69"/>
+      <p><strong>Área 69</strong><br>Una zona misteriosa y restringida, llena de teorías conspirativas y secretos.</p>
+    </div>
+  </div>
+</div>
+</body>

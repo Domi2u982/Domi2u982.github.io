@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historia de GTA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <style>
+   body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://images.ctfassets.net/wn7ipiv9ue5v/NwgElAZU8ZdLmW6v7812Y/3d8a8eb721c109b12bbc2422ba8b4f68/3-4_GTA--Gen_9_Vista_Reshoot_CF__3___1_.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+    .header {
+      background-color: #0073e6;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #ffcc00;
+    }
+
+    .search-bar input {
+      width: 60%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    nav {
+      background-color: #0073e6;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    nav ul li:hover {
+      transform: scale(1.3);
+      z-index: 999;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li:hover > a {
+      background-color: #005bb5;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0073e6;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #0073e6;
+      min-width: 200px;
+    }
+
+    nav ul li ul li:hover > ul {
+      display: block;
+    }
+
+
+.content {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 12px;
+}
+
+h2 {
+  color: #ffcc00;
+  border-bottom: 2px solid #555;
+  padding-bottom: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+  </style>
+</head>
+<body>
+ <div class="header">
+    <h1>GTA Franquicia</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar...">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="Contraportada.html">Portada</a></li>
+ <li>
+        <a href="#history">Historia</a>
+        <ul>
+          <li><a href="sanandreas">GTA: San Andreas</a></li>
+          <li><a href="vicecity">GTA: Vice City</a></li>
+          <li><a href="GTAIII.html">GTA III</a></li>
+	  <li><a href="liberty.html">GTA: Liberty City Stories</a></li>
+          <li><a href="gta4.html">GTA IV</a></li>
+          <li><a href="gta5.html">GTA V</a></li>
+          <li><a href="gta6">GTA VI</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="personajes.html">Personajes</a>
+      </li>
+      <li>
+        <a href="lugares.html">Lugares icónicos</a>
+      </li>
+      <li><a href="extras_noticias.html">Extra y noticias</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div class="content">
+    <h2>Resumen de la saga</h2>
+    <p>La saga Grand Theft Auto ha sido una de las más exitosas e influyentes en la historia de los videojuegos...</p>
+    <div class="gallery">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/12100/header.jpg" alt="GTA San Andreas"/>
+      <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/0106/9EfOgkd9XN01Hzre1v61y27z.png" alt="GTA Trilogy Remaster"/>
+    </div>
+
+    <h2>GTA VI – El más esperado</h2>
+    <p>Grand Theft Auto VI es el próximo título de la serie, desarrollado por Rockstar Games...</p>
+    <div class="gallery">
+      <img src="https://i.blogs.es/1ca280/trailer-1-illustration-16x9-/450_1000.jpg" alt="GTA VI Lucia"/>
+    </div>
+
+    <h2>Último tráiler de GTA VI</h2>
+    <p>El segundo tráiler de GTA VI ha roto récords...</p>
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/VQRLujxTm3c?si=8RH90z_W9Jm6qgbe" frameborder="0" allowfullscreen></iframe>
+
+    <h2>Lo que sabemos hasta ahora</h2>
+    <ul>
+      <li>Fecha estimada de lanzamiento: 2025</li>
+      <li>Ubicación: Vice City (inspirada en Miami)</li>
+      <li>Protagonistas: Lucia y Jason</li>
+      <li>Motor gráfico: RAGE actualizado</li>
+    </ul>
+
+    <h2>GTA Online – Últimas novedades</h2>
+    <p><strong>GTA Online</strong> sigue creciendo con contenido regular...</p>
+    <ul>
+      <li><strong>San Andreas Mercenaries:</strong> Nuevo contenido centrado en operaciones aéreas clandestinas.</li>
+      <li><strong>Actualizaciones semanales:</strong> Nuevos vehículos, desafíos y eventos semanales que mantienen fresco el juego.</li>
+      <li><strong>Misiones en cooperativo:</strong> Atracos, contratos y eventos especiales.</li>
+      <li><strong>Mayor personalización:</strong> Nuevas opciones de ropa, garajes, y armas.</li>
+    </ul>
+    <div class="gallery">
+      <img src="https://media-rockstargames-com.akamaized.net/tina-uploads/posts/175k8294o31ooo/02ce29f09104b756588ce76035527f958071b3df.jpg" alt="San Andreas Mercenaries"/>
+      <img src="https://media-rockstargames-com.akamaized.net/tina-uploads/posts/179kk473a8a18k/510eac47b42642999ac776f4478ae088ef28aceb.jpg" alt="Misiones aéreas GTA Online"/>
+      <img src="https://i.ytimg.com/vi/bgr1S__iRSo/hqdefault.jpg" alt="Eventos Semanales GTA Online"/>
+    </div>
+  </div>
+</body>
+</html>

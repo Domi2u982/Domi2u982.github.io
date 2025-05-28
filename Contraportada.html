@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA DISEÑO</title>
+  <style>
+    /* =====================
+       Global Styles
+    ===================== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://c4.wallpaperflare.com/wallpaper/396/364/992/grand-theft-auto-grand-theft-auto-v-wallpaper-preview.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    /* =====================
+       Header
+    ===================== */
+    .header {
+      background-color: #0073e6;
+      padding: 15px;
+    }
+
+    /* =====================
+       Search Bar
+    ===================== */
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #ffcc00;
+    }
+    .search-bar input {
+      width: 60%;
+      max-width: 400px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* =====================
+       Navigation
+    ===================== */
+    nav {
+      background-color: #0073e6;
+      padding: 10px 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    nav ul li a:hover {
+      background-color: #005bb5;
+      transform: scale(1.1);
+    }
+    /* Dropdown menus */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0073e6;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 0;
+      z-index: 1000;
+    }
+    nav ul li:hover > ul {
+      display: block;
+    }
+    nav ul li ul li {
+      position: relative;
+    }
+    nav ul li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%; /* Despliega submenús hacia la derecha */
+      background-color: #0073e6;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    nav ul li ul li:hover > ul {
+      display: block;
+    }
+
+    /* =====================
+       Carousel
+    ===================== */
+    .carousel-container {
+      width: 80%;
+      max-width: 900px;
+      height: 500px;
+      overflow: hidden;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+      background-color: #000; /* Fondo de respaldo */
+    }
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* =====================
+       Icon Container
+    ===================== */
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      width: 200px;
+    }
+    .icon img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+    }
+    .icon span {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .icon p {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    /* =====================
+       Content (Ads)
+    ===================== */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Enlace para quitar subrayados y heredar color */
+.content a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilo de cada anuncio */
+.ad {
+  width: 250px;           /* Ancho fijo  */
+  height: 350px;          /* Alto fijo  */
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Estilo de la imagen */
+.ad img {
+  width: 100%;
+  height: 70%;           /* Ocupa la parte superior de la caja */
+  object-fit: cover;     /* Ajusta la imagen sin distorsión */
+}
+
+/* Estilo del texto */
+.ad p {
+  margin: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+ /* =====================
+       Text Box
+    ===================== */
+    .text-box {
+      width: 80%;
+      max-width: 900px;
+      padding: 20px;
+      margin: 20px auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+    }
+    
+    .text-box h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #cce7ff;
+    }
+    
+    .text-box p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+ .info-general {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 900px;
+      margin: 20px auto;
+      background: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+      padding: 20px;
+      border-radius: 10px;
+      gap: 20px;
+    }
+    .split-image {
+      flex: 1;
+    }
+    .split-image img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+    .split-text {
+      flex: 1;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.1); /* Fondo extra translúcido en el texto */
+      padding: 10px;
+      border-radius: 10px;
+    }
+    @media (max-width: 768px) {
+      .info-general {
+        flex-direction: column;
+      }
+    }
+    /* =====================
+       Nuevos Estilos: Sección Info General (Texto e Imagen Invertidos)
+    ===================== */
+    .info-general {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 900px;
+      margin: 20px auto;
+      background: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+      padding: 20px;
+      border-radius: 10px;
+      gap: 20px;
+    }
+    .split-text {
+      flex: 1;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.1); /* Fondo extra translúcido para el bloque de texto */
+      padding: 10px;
+      border-radius: 10px;
+font-size: 22px; 
+    }
+    .split-image {
+      flex: 1;
+    }
+    .split-image img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+@media (max-width: 768px) {
+  .split-text {
+    font-size: 16px; /* Reducir el tamaño en pantallas pequeñas */
+  }
+}
+
+  </style>
+</head>
+
+
+
+<body>
+  <!-- Header y Buscador -->
+  <div class="header">
+    <h1>GTA Franquicia</h1>
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar...">
+  </div>
+
+  <!-- Navegación -->
+  <nav>
+    <ul>
+      <li><a href="portada.html">Portada</a></li>
+      <li>
+        <a href="#history">Historia</a>
+        <ul>
+          <li><a href="sanandreas">GTA: San Andreas</a></li>
+          <li><a href="vicecity">GTA: Vice City</a></li>
+          <li><a href="GTAIII.html">GTA III</a></li>
+	  <li><a href="liberty.html">GTA: Liberty City Stories</a></li>
+          <li><a href="gta4.html">GTA IV</a></li>
+          <li><a href="gta5.html">GTA V</a></li>
+          <li><a href="gta6.html">GTA VI</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="personajes.html">Personajes</a>
+      </li>
+      <li>
+        <a href="lugares.html">Lugares icónicos</a>
+      </li>
+      <li><a href="extras_noticias.html">Extra y noticias</a></li>
+    </ul>
+  </nav>
+
+  <!-- Carrusel -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <img src="https://img.chilango.com/2013/09/franklin-trevor-y-michael-estan-listos-para-hacerte-vibrar.jpg" alt="Imagen 1">
+      <img src="https://sm.ign.com/t/ign_latam/news/g/gta-5-has-/gta-5-has-sold-in-nearly-52m-copies-to-retail_ym5j.1280.jpg" alt="Imagen 2">
+      <img src="https://img.asmedia.epimg.net/resizer/v2/FEBFJBAB4JN5NM4XXOGIUH27TM.jpg?auth=85748ec31008258ee62434843c4000b633022cd2a2503ffe2e7b799e87b2da25&width=1472&height=828&smart=true" alt="Imagen 3">
+      <img src="https://blog.auto-selection.com/wp-content/gallery/gta-5/grand-theft-auto-v-playstation-3-ps3-1357326682-073.jpg" alt="Imagen 4">
+      <img src="https://gagadget.com/media/post_big/01053_Jl7rIru.jpg" alt="Imagen 5">
+    </div>
+  </div>
+	
+  <div class="text-box">
+    <h2>GTA</h2>
+    <p>El impacto de Grand Theft Auto en la industria del videojuego ha sido profundo y duradero. La franquicia ha redefinido el género de los juegos de mundo abierto, estableciendo nuevos estándares en términos de libertad, exploración y narrativa. Su enfoque en historias complejas y personajes carismáticos ha permitido que los jugadores se sumerjan en mundos llenos de matices sociales, sátira y crítica cultural.</p>
+  </div>
+	
+ <div class="content">
+  <a href="sanandreas.html">
+    <div class="ad">
+      <img src="https://upload.wikimedia.org/wikipedia/pt/d/d3/Grand_Theft_Auto_San_Andreas_capa.png" alt="GTA: San Andreas">
+      <p>GTA: San Andreas</p>
+    </div>
+  </a>
+  
+  <a href="vicecity.html">
+    <div class="ad">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/ce/Vice-city-cover.jpg" alt="GTA: Vice City">
+      <p>GTA: Vice City</p>
+    </div>
+  </a>
+  
+  <a href="GTAIII.html">
+    <div class="ad">
+      <img src="https://m.media-amazon.com/images/I/91e-QuhsYcL.jpg" alt="GTA III">
+      <p>GTA III</p>
+    </div>
+  </a>
+  
+  <a href="liberty.html">
+    <div class="ad">
+      <img src="https://m.media-amazon.com/images/M/MV5BNWE4OTMzMDQtMzZhMS00NGMzLWI5YTItOGNkNzA0NzI4MDI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="GTA Liberty City">
+      <p>GTA Liberty City</p>
+    </div>
+  </a>
+  
+  <a href="gta4.html">
+    <div class="ad">
+      <img src="https://m.media-amazon.com/images/I/71SZaOL+8ML._AC_UF894,1000_QL80_.jpg" alt="GTA IV">
+      <p>GTA IV</p>
+    </div>
+  </a>
+  
+  <a href="gta5.html">
+    <div class="ad">
+      <img src="https://products.eneba.games/resized-products/s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg" alt="GTA V">
+      <p>GTA V</p>
+    </div>
+  </a>
+  
+  <a href="gta6.html">
+    <div class="ad">
+      <img src="https://preview.redd.it/uuhy791ml0pc1.png?auto=webp&s=80eb635d867c5ded0051972c7b9f51a3366d02bb" alt="GTA VI">
+      <p>GTA VI</p>
+    </div>
+  </a>
+
+	   <a href="online.html">
+    <div class="ad">
+      <img src="https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/1280/GTAOnline.jpg" alt="GTA Online">
+      <p>GTA Online</p>
+    </div>
+  </a>
+</div>
+	</div>
+
+
+<div class="info-general">
+    <div class="split-image">
+      <img src="https://upload.wikimedia.org/wikipedia/pt/d/d3/Grand_Theft_Auto_San_Andreas_capa.png" alt="GTA San Andreas">
+    </div>
+    <div class="split-text">
+      <h2>GTA San Andreas</h2>
+      <p>
+        es un videojuego de mundo abierto donde controlas a Carl "CJ" Johnson, quien regresa a Los Santos tras el asesinato de su madre. Al volver, descubre que su barrio está controlado por pandillas rivales y policías corruptos.
+
+        CJ debe ayudar a su familia, recuperar el control del territorio y enfrentarse a traiciones, corrupción y enemigos en todo el estado de San Andreas, que incluye tres ciudades: Los Santos, San Fierro y Las Venturas.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-general">
+    <div class="split-text">
+      <h2>GTA Vice City</h2>
+      <p>
+        juegas como Tommy Vercetti, un exconvicto que llega a una ciudad inspirada en el Miami de los 80. Tras ser traicionado, lucha por vengarse y construir su propio imperio criminal, enfrentando mafias y traiciones en un mundo lleno de acción, música retro y estilo ochentero.
+      </p>
+    </div>
+    <div class="split-image">
+      <!-- Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta real de tu imagen -->
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/ce/Vice-city-cover.jpg" alt="Vice City">
+    </div>
+  </div>
+
+<div class="info-general">
+    <div class="split-image">
+      <!-- Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta real de tu imagen -->
+      <img src="https://c4.wallpaperflare.com/wallpaper/791/353/147/grand-theft-auto-gta-iii-liberty-city-wallpaper-preview.jpg" alt="Liberty City">
+    </div>
+    <div class="split-text">
+      <h2>GTA Liberty City</h2>
+      <p>
+        GTA: Liberty City Stories sigue a Toni Cipriani, un mafioso que regresa a Liberty City tras años escondido. Trabaja para la familia Leone y lucha por recuperar el control de la ciudad enfrentando traiciones, corrupción y bandas rivales. Es una precuela de GTA III, mostrando cómo la ciudad llegó al caos que se ve en ese juego.
+      </p>
+    </div>
+  </div>
+<div class="info-general">
+    <div class="split-text">
+      <h2>GTA III</h2>
+      <p>
+        En GTA III, juegas como Claude, un criminal traicionado por su novia durante un robo. Tras escapar de una prisión en Liberty City, busca vengarse mientras se abre camino en el mundo del crimen, trabajando para mafias, bandas y carteles. Es el primer GTA en 3D y marcó un antes y un después en los juegos de mundo abierto.
+      </p>
+    </div>
+    <div class="split-image">
+      <!-- Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta real de tu imagen -->
+      <img src="https://m.media-amazon.com/images/I/91e-QuhsYcL.jpg" alt="GTA 3">
+    </div>
+  </div>
+
+<div class="info-general">
+    <div class="split-image">
+      <!-- Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta real de tu imagen -->
+      <img src="https://m.media-amazon.com/images/I/71SZaOL+8ML._AC_UF894,1000_QL80_.jpg" alt="GTA IV">
+    </div>
+    <div class="split-text">
+      <h2>GTA IV</h2>
+      <p>
+        En GTA IV, juegas como Niko Bellic, un inmigrante de Europa del Este que llega a Liberty City buscando el “sueño americano” y huyendo de su pasado. Pronto se ve envuelto en el crimen, la traición y la lucha por sobrevivir mientras ayuda a su primo Roman y enfrenta a peligrosos mafiosos. El juego se centra en decisiones morales, relaciones personales y una ciudad más realista y oscura.
+      </p>
+    </div>
+  </div>
+
+<div class="info-general">
+    <div class="split-text">
+      <h2>GTA V</h2>
+      <p>
+        En GTA V controlas a tres protagonistas: Michael, un ex ladrón retirado; Franklin, un joven ambicioso; y Trevor, un criminal impredecible. Juntos planean y ejecutan grandes golpes en Los Santos, una ciudad inspirada en Los Ángeles. El juego combina acción, humor negro y libertad total en un enorme mundo abierto lleno de misiones, actividades y decisiones.
+      </p>
+    </div>
+    <div class="split-image">
+      <!-- Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta real de tu imagen -->
+      <img src="https://products.eneba.games/resized-products/s29Db6ZBVLneuD0t66qnYRamvGDP3p8chLz-3IomxcU_350x200_2x-0.jpeg" alt="gta v">
+    </div>
+  </div>
+
+<div class="info-general">
+    <div class="split-image">
+      <!-- Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta real de tu imagen -->
+      <img src="https://preview.redd.it/uuhy791ml0pc1.png?auto=webp&s=80eb635d867c5ded0051972c7b9f51a3366d02bb" alt="GTA VI">
+    </div>
+    <div class="split-text">
+      <h2>GTA VI</h2>
+      <p>
+        GTA VI estará ambientado en una versión moderna de Vice City, dentro del ficticio estado de Leonida, inspirado en Florida. La historia seguirá a Lucia y un compañero criminal aún sin nombre, en una trama que gira en torno a robos, persecución policial y el crimen organizado. El juego promete un mundo abierto más grande, dinámico y realista, con nuevas mecánicas y una narrativa centrada en dos protagonistas.
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <!-- Iconos -->
+  <div class="icon-container">
+    <a href="https://www.rockstargames.com/" target="_blank" class="icon">
+      <img src="https://yt3.googleusercontent.com/Wy_nqo9pyx1g1t4DGYiBfsaQsLDadZ1QYlbBklrc4IoTNlx2pVGv3rQwa5xUhtGsPTa8lrad=s900-c-k-c0x00ffffff-no-rj" alt="Rockstar Games">
+      <span>Rockstar Games</span>
+      <p>Sitio oficial de Rockstar, creador de GTA.</p>
+    </a>
+    <a href="https://www.instagram.com/rockstargames/" target="_blank" class="icon">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="Instagram">
+      <span>Instagram</span>
+      <p>Cuenta de noticias y avances.</p>
+    </a>
+    <a href="https://www.twitch.tv/rockstargames" target="_blank" class="icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Twitch.jpg" alt="Twitch">
+      <span>Twitch</span>
+      <p>Transmisiones en vivo y gameplay.</p>
+    </a>
+    <a href="https://www.facebook.com/rockstargames" target="_blank" class="icon">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQnULcBfSqH9C3ooVVkPDA9rxRyqHoR3M1ng&s" alt="Facebook">
+      <span>Facebook</span>
+      <p>Actualizaciones y comunidad.</p>
+    </a>
+    <a href="https://www.youtube.com/@RockstarGames" target="_blank" class="icon">
+      <img src="https://play-lh.googleusercontent.com/6am0i3walYwNLc08QOOhRJttQENNGkhlKajXSERf3JnPVRQczIyxw2w3DxeMRTOSdsY" alt="YouTube">
+      <span>YouTube</span>
+      <p>Tráilers y contenido exclusivo.</p>
+    </a>
+  </div>
+
+ 
+
+  <!-- Script del Carrusel -->
+  <script>
+    let index = 0;
+    const carousel = document.querySelector(".carousel");
+    const totalSlides = document.querySelectorAll(".carousel img").length;
+
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const offset = -index * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Cambio automático cada 4 segundos
+    setInterval(nextSlide, 4000);
+  </script>
+</body>
+</html>
