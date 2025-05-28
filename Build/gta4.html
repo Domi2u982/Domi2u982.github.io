@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTA IV- Información</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      .montserrat { font-family: 'Montserrat', sans-serif; }
+      margin: 0;
+      padding: 0;
+      background: url('https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/86f4cb49763c34e9816535006f5e6a08.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .header {
+      background-color: #0073e6;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #ffcc00;
+    }
+
+    .search-bar input {
+      width: 60%;
+      max-width: 400px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    nav {
+      background-color: #0073e6;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    nav ul li:hover {
+      transform: scale(1.3);
+      z-index: 999;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    nav ul li:hover > a {
+      background-color: #005bb5;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0073e6;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul li ul li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: #0073e6;
+      min-width: 200px;
+    }
+
+    nav ul li ul li:hover > ul {
+      display: block;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .character-section, .location-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+    iframe {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+#consolas {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+#consolas h2 {
+  font-size: 28px;
+  color: #cce7ff;
+}
+
+#consolas p {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.platform-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  text-decoration: none;
+  color: white;
+}
+
+.platform img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.platform a {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white; /* Mantiene el color del enlace sin cambios */
+}
+
+.platform a:hover {
+  text-decoration: underline; /* Efecto al pasar el cursor */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  #consolas {
+    padding: 15px;
+  }
+
+  #consolas h2 {
+    font-size: 24px;
+  }
+
+  #consolas p {
+    font-size: 18px;
+  }
+
+  .platform a {
+    font-size: 18px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>GTA Franquicia</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar...">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="Contraportada">Portada</a></li>
+       <li>
+        <a href="#history">Historia</a>
+        <ul>
+          <li><a href="sanandreas">GTA: San Andreas</a></li>
+          <li><a href="vicecity">GTA: Vice City</a></li>
+          <li><a href="GTAIII.html">GTA III</a></li>
+	  <li><a href="liberty.html">GTA: Liberty City Stories</a></li>
+          <li><a href="gta4.html">GTA IV</a></li>
+          <li><a href="gta5.html">GTA V</a></li>
+          <li><a href="gta6">GTA VI</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="personajes.html">Personajes</a>
+      </li>
+      <li>
+        <a href="lugares.html">Lugares icónicos</a>
+      </li>
+      <li><a href="extras_noticias.html">Extra y noticias</a></li>
+    </ul>
+  </nav>
+
+<div class="content">
+  <!-- Historia -->
+  <h2>GTA IV - Historia</h2>
+  <p>
+    Grand Theft Auto IV se sitúa en Liberty City, una representación ficticia de Nueva York. La historia sigue a <strong>Niko Bellic</strong>, un inmigrante procedente de Europa del Este que llega a la ciudad en busca del sueño americano. A medida que se instala en este mundo caótico, Niko se enfrenta a traiciones, dilemas morales y el implacable submundo criminal que define su nueva vida.
+  </p>
+  
+  <!-- Consolas -->
+  <h2>Consolas en las que salió GTA IV</h2>
+  <section id="consolas">
+    <p>Grand Theft Auto IV fue lanzado originalmente para las siguientes plataformas:</p>
+    <div class="platform-list">
+      <div class="platform">
+        <img src="https://logowik.com/content/uploads/images/sony-play-station-3-ps36722.jpg" alt="PlayStation 3">
+        <a href="https://store.rockstargames.com/es-419/game/buy-grand-theft-auto-iv" target="_blank">PlayStation 3</a>
+      </div>
+      <div class="platform">
+        <img src="https://foroalfa.org/imagenes/ilustraciones/1121.jpg" alt="Windows">
+        <a href="https://store.steampowered.com/app/12210/Grand_Theft_Auto_IV_The_Complete_Edition/" target="_blank">Windows (Steam)</a>
+      </div>
+      <div class="platform">
+        <img src="https://i.ytimg.com/vi/F64TpQEPJmI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDugeL8GlqBiJc0yfCk8czJeKgPhg" alt="Xbox 360">
+        <a href="https://www.xbox.com/es-mx/games/store/Grand-Theft-Auto-IV/BRQ2SCZCTXF2" target="_blank">Xbox 360</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Trailer -->
+  <h2>GTA IV - Trailer</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/M80K51DosFo?si=vLPQzEgeWRKJCtUn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+  <!-- Mapa -->
+  <h2>Mapa de GTA IV</h2>
+  <img src="https://www.nintenderos.com/wp-content/uploads/2024/09/mapa-completo-de-gta-iv.jpg" alt="Mapa de Liberty City" />
+  
+  <!-- Personajes Principales -->
+  <h2>Personajes Principales</h2>
+  <div class="character-section">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmbGFJPMFYpqs-mbICrKaUtc5C5cqcmU2bgjf-rnYbSNYJ4YLOmNV87nh8K0SziD9c_Y&usqp=CAU" alt="Niko Bellic"/>
+      <p><strong>Niko Bellic</strong><br>El protagonista, un inmigrante en busca de redención y del sueño americano en un mundo implacable.</p>
+    </div>
+    <div class="card">
+      <img src="https://pm1.aminoapps.com/7172/5eabb1e669e87b8a7cc2bcc6c841a8b361c5cc23r1-624-373v2_00.jpg" alt="Roman Bellic"/>
+      <p><strong>Roman Bellic</strong><br>Primo de Niko, cuya vida llena de excesos y problemas financieros añade complejidad y humor a la trama.</p>
+    </div>
+    <ul>
+      <li><strong>Niko Bellic:</strong> Llega a Liberty City en busca de una vida mejor, enfrentándose a su turbulento pasado y a la corrupción del submundo.</li>
+      <li><strong>Roman Bellic:</strong> Su carácter impulsivo y sus problemas económicos complican la existencia de Niko, creando una dinámica familiar intensa.</li>
+    </ul>
+  </div>
+  
+  <!-- Antagonistas -->
+  <h2>Antagonistas</h2>
+  <div class="character-section">
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/dCthgjPfjKo/maxresdefault.jpg" alt="Mikhail Faustin"/>
+      <p><strong>Mikhail Faustin</strong><br>Un criminal violento y volátil que representa uno de los primeros desafíos y traiciones a los que se enfrenta Niko.</p>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIHI8eSXhhoq6jYkVMTJkYFpwQV7EUC4Esg&s" alt="Dimitri Rascalov"/>
+      <p><strong>Dimitri Rascalov</strong><br>Un astuto jefe criminal cuya traición y manipulación desencadenan eventos críticos en la historia.</p>
+    </div>
+    <ul>
+      <li><strong>Mikhail Faustin:</strong> Su temperamento y métodos brutales ponen a prueba la resistencia de Niko en el inframundo de Liberty City.</li>
+      <li><strong>Dimitri Rascalov:</strong> Encarnando la corrupción y la traición, su accionar influye decisivamente en el destino del protagonista.</li>
+    </ul>
+  </div>
+  
+  <!-- Personajes Secundarios -->
+  <h2>Personajes Secundarios</h2>
+  <div class="character-section">
+    <div class="card">
+      <img src="https://gtwfilesie.grandtheftwiki.com/LittleJacob-GTAIV.jpg" alt="Little Jacob"/>
+      <p><strong>Little Jacob</strong><br>Un aliado leal de Niko, conocido por su carisma y conexiones en el bajo mundo de Liberty City.</p>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/67/cb/9d/67cb9dd2aea74dc9f7156df14a299397.jpg" alt="Packie McReary"/>
+      <p><strong>Packie McReary</strong><br>Miembro de la familia McReary, que aporta tanto humor como apoyo en situaciones peligrosas.</p>
+    </div>
+    <ul>
+      <li><strong>Little Jacob:</strong> Su amistad y recursos son fundamentales para que Niko enfrente los desafíos de la ciudad.</li>
+      <li><strong>Packie McReary:</strong> Ofrece un contrapunto lleno de humor y lealtad en medio del caos de Liberty City.</li>
+    </ul>
+  </div>
+  
+  <!-- Secretos -->
+  <h2>Secretos</h2>
+  <table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>El Corazón de Liberty City</td>
+        <td>Un secreto escondido en la Estatua de la Felicidad, accesible solo mediante una ruta y visión específica desde el aire.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>El Rastro de la Traición</td>
+        <td>Pistas sutiles repartidas por la ciudad que revelan conspiraciones y traiciones entre figuras del crimen.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Easter Eggs del FBI</td>
+        <td>Detalles ocultos que hacen alusión a teorías conspirativas y a la injerencia gubernamental en los asuntos criminales.</td>
+      </tr>
+<td>4</td>
+      <td>El Misterio del Ectoplasma</td>
+      <td>En ciertos cementerios de Liberty City se reporta la aparición de una figura espectral, atribuida a leyendas urbanas y al misterioso ectoplasma.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>El Pasadizo Secreto</td>
+      <td>En algunos barrios de Algonquin, los jugadores han descubierto pasadizos ocultos tras derrumbar ciertas paredes, revelando rutas secretas añadidas como Easter Egg.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>El Mural Enigmático</td>
+      <td>Un graffiti críptico en un edificio abandonado de Dukes sugiere mensajes secretos relacionados con conspiraciones del inframundo de la ciudad.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>La Voz de la Conspiración</td>
+      <td>Cambios sutiles en la transmisión de algunas emisoras de radio ocultan mensajes cifrados, que muchos creen están vinculados a operaciones encubiertas en Liberty City.</td>
+    </tr>
+    </tbody>
+  </table>
+  
+  <!-- Lugares Icónicos -->
+  <h2>Lugares Icónicos</h2>
+  <div class="location-section">
+    <div class="card">
+      <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/11/6-2.jpg" alt="Liberty City"/>
+      <p><strong>Liberty City</strong><br>La ciudad vibrante y caótica que sirve como escenario principal, inspirada en la Nueva York real.</p>
+    </div>
+    <div class="card">
+      <img src="https://gtwfilesie-thumb.grandtheftwiki.com/CityHall-GTAIV-northwards.jpg/350px-CityHall-GTAIV-northwards.jpg" alt="Algonquin"/>
+      <p><strong>Algonquin</strong><br>Distrito inspirado en Manhattan, centro neurálgico de actividad, negocios y crimen en Liberty City.</p>
+    </div>
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/esgta/images/f/fe/Dukes_distrito_GTA_IV.png/revision/latest/scale-to-width-down/1200?cb=20100725190343" alt="Dukes"/>
+      <p><strong>Dukes</strong><br>Barrio con influencia residencial e industrial, basado en zonas de Queens.</p>
+    </div>
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/gtawiki/images/7/70/SouthBohan-GTA4-westwards.jpg/revision/latest?cb=20090828151016" alt="Bohan"/>
+      <p><strong>Bohan</strong><br>Un distrito duro inspirado en el Bronx, donde la lucha por la supervivencia es cotidiana.</p>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+  </div>
+</div>
+</body>
